@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day-1</title>
+  </head>
+  <body>
+    <h1>DAY 1</h1>
+
+    <ol>
+      <li>Whats is Javascript?</li>
+      <li>What is JavaScript Runtime Environment?</li>
+      <li>What is JavaScript Engine?</li>
+      <li>What is Execution in Javascript?</li>
+    </ol>
+
+    <h3>1.Whats is Javascript?</h3>
+    <p>
+      Javascript is a dynamic programming language. And is the most popular
+      language worldwide. JS is highest paid job in US and other countries. JS
+      is used everywhere now. Web apps and Mobile applications can be created
+      through JS. HTML&CSS are static. JS is used in Netflix, Wallmart, PayPal
+      and so on.
+    </p>
+
+    <h3>2.What is JavaScript Runtime Environment?</h3>
+    <p>
+      Javascript run-time environment is the place where our program gets
+      executed.It determines what global objects your program can access and it
+      can also impact how it runs. JS run-time environment consists of
+      API's,Javascript Engine,Callback Queue and Microtask Queue.
+    </p>
+
+    <h3>3.What is JavaScript Engine?</h3>
+    <p>
+      Javascript Engine is software component that executes javascript
+      code.Different browsers have different javascript Engines.For ex. Google
+      Chrome has V8 Engine,Internet explorer have Chakra and Mozilla have Spider
+      Monkey.The architecture of V8 engine is shown below.
+    </p>
+    <img
+      src="https://assets.digitalocean.com/articles/alligator/js/v8-engine/javascript_journey.png"
+      alt="img"
+    />
+
+    <h3>4. What is Execution in Javascript?</h3>
+
+    <ol>
+      Javascript execution context is divided into two parts
+      <li>Creation Phase</li>
+      <li>Execution Phase</li>
+    </ol>
+    <br />
+    <h4>Creation Phase:</h4>
+    <p>
+      This is the initial phase of Global execution content.Here all variables
+      and functions are given memory allocation ie. stored in heap memory and
+      values assigned as undefined.The global execution context is pushed into
+      the callstack and it remains there until all the code gets executed.After
+      complete execution global execution context gets popped from callstack.
+    </p>
+
+    <h4>Execution Phase :</h4>
+    <p>
+      This is the final phase of global execution context.Here code is executed
+      line by line and the original values are assigned to the variables and to
+      the functions at this stage. When function gets executed a seperate
+      execution context gets executed ie. function execution which is pushed
+      into the stack ie. at the top of the global execution context.Here the
+      code inside the function gets excuted. After the execution of the function
+      the function execution context gets popped out of the callstack and the
+      rest of the code gets excuted.
+    </p>
+    <br />
+    <h4>Example</h4>
+    <pre>
+        let x = 10;
+
+        function timesTen(a){
+            return a * 10;
+        }
+
+        let y = timesTen(x);
+
+        console.log(y); // 100
+    </pre>
+    <img
+      src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-global-execution-context-in-creation-phase.png"
+      alt=""
+    />
+    <img
+      src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-global-execution-context-in-execution-phase.png"
+      alt=""
+    />
+    <img
+      src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-function-execution-context-in-creation-phase.png"
+      alt=""
+    />
+    <img
+      src="https://www.javascripttutorial.net/wp-content/uploads/2019/12/javascript-execution-context-function-execution-context-in-execution-phase.png"
+      alt=""
+    />
+
+    <script src="./index.js"></script>
+  </body>
+</html>

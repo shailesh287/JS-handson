@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div style="text-align: center">
+      <h1>JAVASCRIPT-Day4</h1>
+      <span>Date - 22<sup>nd</sup>March 2022</span>
+    </div>
+    <hr />
+
+    <h3>1 Q.)Differences between var let and const variables AND HOISTING</h3>
+    <br />
+    <b>VAR:</b>
+    i.)var variables are global scope variables. ii.)var variables can be
+    hoisted. ii.)var variables can be redeclared. iii.)var variables can be
+    updated. iv.)var variables once declared,can be initialised later also.
+
+    <br />
+    <b>LET:</b>
+    i.)let variables are block scope variables. ii.)let variables can be
+    hoisted,but they are hoisted to the temporal dead zone. ii.)let variables
+    cannot be redeclared. iii.)let variables can be updated. iv.)let variables
+    once declared,can be initialised later also.
+
+    <br />
+    <b>CONST:</b>
+    i.)const variables are block scope variables. ii.)const variables can be
+    hoisted,but they are hoisted to the temporal dead zone. ii.)const variables
+    cannot be redeclared. iii.)const variables cannot be updated. iv.)const
+    variables should be declared and initialised at the same time.
+
+    <br />
+    <br />
+    <b>HOISTING:</b>Hoisting is a default behaviour of javascript to push the
+    decalrations to the top.
+    <br />
+    <b>TEMPORAL DEAD ZONE:</b> When let and const variables are declared ,they
+    are said to be in temporal dead zone until unless they get initialised with
+    a value.
+
+    <hr style="height: 3px; background-color: black" />
+    <pre>
+        <h3> 2Q.)In Execution or global execution context we have two phases i.)Creation phase and ii.)Execution phase</h3>
+     
+        I.)<b>Creation phase:</b> In creation phase the compiler runs through the entire code , so in the first iteration it pick ups all the function declarations and store them in the memory with their reference ,
+         and in the second iteration it picks up all the variables and assign them undefined.
+     
+         II.)<b>Execution phase:</b> In execution phase it assigns the variable with a value and starts executing the functions.
+     
+         <br/>
+         <br/>
+       <img src="https://miro.medium.com/max/1220/1*EWLRJFL5gnPfDpdIKj6zLQ.png" alt="notfound"/>
+         <br/>
+         <br/>
+     
+          <b>Call Stack, Call back queue,Microtask queue,Event Loop,WebApi,</b>
+          Consider we have a Settimeout function which is a WebApi.Since Settimeout is asynchronous function , 
+          in javascript the asynchronous functions are executed in a different way,they will not interfere with the synchronous tasks.
+          The settimeout function is passed to the call back queue,Call back queue by the name itself will have the callback functions which are yet to be executed,
+          Microtask queue also does the same thing but Microtask queue takes Promises,Microtask queue has more priority than Call back queue.
+          The Event loop acts like a mediator between (callback queue ,microtask queue) and (Call stack).Event loop tasks is to send the call back functions to call stack for execution once call stack gets empty.
+          Call Stack keeps the tracking of functions.And function is removed from the call stack once the function gets returned or when the functions reaches its end of the scope or end point.
+          <br/>
+          <br/>
+          <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Y1v6aJBu--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/ek7ji4zrimozpp2yzk0a.png" height="500px" alt="notfound"/>
+     
+      
+     </pre>
+    <hr style="height: 3px; background-color: black" />
+
+    <pre>
+     <b style="font-size: larger;"> 3Q.)  A.)IF -ELSE CODING QUESTION:</b>
+        //USING IF ELSE CONDITION
+        const age=30;
+        
+        if(age<30)
+        {
+            console.log("Adult");
+        }
+        else
+        {
+            console.log("OLD");
+        }
+        
+        
+        // USING TERNARY OPERATOR
+        
+        console.log(age>30?"Adult":"OLD");
+
+    </pre>
+
+    <hr style="height: 3px; background-color: black" />
+    <pre>
+    <b style="font-size: larger;"> 3Q.)  B.)IF -ELSE LADDER CODING QUESTION:</b>
+          
+       
+        // ELSE IF LADDER
+
+        const ageofperson=28;
+        
+        if(ageofperson<15)
+        {
+            console.log("Young");
+        }
+        
+        else if(ageofperson>15&&ageofperson<30)
+        {
+            console.log("Adult");
+        }
+        
+        else{
+            console.log("OLD");
+        }
+    </pre>
+
+    <hr style="height: 3px; background-color: black" />
+    <pre>
+        <b style="font-size: larger;"> 4Q.)SWITCH CASE:</b>
+
+        // SWITCH CASE
+
+        let day = 3;
+        let dayName;
+        
+        switch (day) {
+          case 0:
+            dayName = 'Monday';
+            break;
+         
+            
+          case 1:
+            dayName = 'Tuesday';
+            break;
+          case 2:
+            dayName = 'Wednesday';
+            break;
+          case 3:
+            dayName = 'Thursday';
+            break;
+          case 4:
+            dayName = 'Friday';
+            break;
+          case 5:
+            dayName = 'Saturday';
+            break;
+            case 6:
+                dayName = 'Sunday';
+                break;
+                
+        
+          default:
+            dayName = 'Invalid day';
+        }
+        
+        console.log(dayName);
+        </pre>
+
+    <hr style="height: 3px; background-color: black" />
+    <pre>
+        <b style="font-size: larger;"> 5Q.)PRINTING 13 TABLE WITH THE HELP OF FOR LOOP:</b>
+        //FOR LOOP TO PRINT 13 TABLE
+
+        for(var i=1;i<11;i++)
+        {
+            console.log("13","*",i,"=",13*i);
+        }
+        
+    </pre>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
